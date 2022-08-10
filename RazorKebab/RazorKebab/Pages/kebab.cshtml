@@ -1,0 +1,43 @@
+﻿@page
+@model RazorKebab.Pages.kebabModel
+@{
+}
+
+<div class="text-center">
+	<div class="mainText">
+		<h1 class="display-4 text-black">Wybór należy do Ciebie!</h1>
+		<h4>Spróbuj naszych propozycji lub stwórz własną kompozycję.</h4>
+		<p class="smallText"><i>Tylko jeden kebab na zamówieniu.</i></p>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 mb-5 mt-5">
+				<div class="w-100 row makeYourOwnDiv">
+					<div class="col-4">
+						<img src="~/images/kebaby/own.jpg" class="w-100"/>
+					</div>
+					<div class="col-8 align-items-center">
+						<div class="align-middle makeYourOwnText">
+							<h3 style="text-align:left;">Stwórz własnego kebaba</h3>
+							<p style="text-align: left;">Skorzystaj z naszego KEBABONATORA!</p>
+							 <a class="btn btn-primary" style="float: left" asp-area="" asp-page="Forms/CustomKebab">Spróbuj...</a>
+						</div>
+					</div>
+				</div>
+			</div>				
+			@foreach (var kebab in Model.fakeKebabDB)
+			{
+				var imagePath = "~/images/kebaby/" + (kebab.ImageTitle + ".jpg");
+				<div class="col-4 mb-5">
+				<img src="@imagePath" class="w-100" asp-append-version="true"/>
+				<a class="btn btn-primary mt-1" asp-area="" asp-page="Checkout/Checkout" 
+				asp-route-ImageTitle="@kebab.ImageTitle" 
+				asp-route-KebabPrice="@kebab.FinalPrice">Zamów mnie!</a>
+				<br/>
+			    </div>
+			}
+			
+		</div>
+	</div>
+
+</div>

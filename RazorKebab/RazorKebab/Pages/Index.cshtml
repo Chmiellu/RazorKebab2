@@ -1,0 +1,16 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <div class="mainText">
+<h1 class="display-4 text-black">Witamy w Razor Kebab</h1>
+    <h2 class="mainSubTitle">Razor Kebab to najlepsze miejsce w Pierśćcu!</h2>
+    </div>
+    
+ <img class="mainImage" src="~/images/main.jpg"/>
+ <br/>
+ <a class="btn btn-primary" asp-area="" asp-page="Forms/CustomKebab">ZAMÓW KEBABA</a>
+</div>

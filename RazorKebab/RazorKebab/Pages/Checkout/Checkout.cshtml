@@ -1,0 +1,15 @@
+﻿ @page
+@model RazorKebab.Pages.Checkout.CheckoutModel
+@{
+}
+<h1>Twoje zamówienie!</h1>
+@{
+	var imagePath="~/images/kebaby/"+(@Model.ImageTitle+".jpg");
+}
+<div class="align-content-center">
+	<img class="w-100" asp-append-version="true"/>
+	<p>Twoje zamówienie @Model.KebabName kebab zostało zaakceptowane!</p>
+	<p>Cena wynosi: @Model.KebabPrice złotych.</p>
+	<br/>
+	<a class="btn alert-primary mt-1 mx-auto" asp-area="" asp-page="ThankYou">Potwierdź zamówienie</a>
+</div>

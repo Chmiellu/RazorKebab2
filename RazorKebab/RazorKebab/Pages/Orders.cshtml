@@ -1,0 +1,40 @@
+﻿@page
+@model RazorKebab.Pages.OrdersModel
+@{
+}
+
+<h3>Zamówienia</h3>
+
+<hr />
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				Id
+			</th>
+			<th>
+				Nazwa 
+			</th>
+			<th>
+				Cena
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var order in Model.KebabOrders)
+		{<tr>
+			<td>
+				@order.Id
+			</td>
+			<td>
+				@order.KebabName
+			</td>
+			<td>
+				@order.BasePrice
+			</td>
+		</tr>
+			
+		}
+	</tbody>
+</table>
