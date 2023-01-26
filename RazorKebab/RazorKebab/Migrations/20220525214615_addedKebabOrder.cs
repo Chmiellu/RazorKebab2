@@ -12,15 +12,15 @@ namespace RazorKebab.Migrations
                 name: "KebabOrders",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    //Id = table.Column<int>(type: "int", nullable: false)
+                    //    .Annotation("SqlServer:Identity", "1, 1"),
                     KebabName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BasePrice = table.Column<float>(type: "real", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_KebabOrders", x => x.Id);
                 });
+                //constraints: table =>
+                //{
+                //    table.PrimaryKey("PK_KebabOrders", x => x.Id);
+                //});
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

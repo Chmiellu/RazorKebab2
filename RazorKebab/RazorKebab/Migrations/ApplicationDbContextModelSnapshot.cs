@@ -36,7 +36,7 @@ namespace RazorKebab.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                  //  b.HasKey("Id");
 
                     b.ToTable("KebabOrders");
                 });
